@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свържете се с LifeHack Software за консултация и оферта.">
+    <title>Контакти - LifeHack Software</title>
+
+    <link rel="canonical" href="https://lifehacksoftware.com/contact.html" />
+    <link rel="alternate" hreflang="bg" href="https://lifehacksoftware.com/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://lifehacksoftware.com/en/contact.html" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>Свържете се с нас</h1>
+            <p>Готови сме да обсъдим вашия проект</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="contact-info">
+                    <h3>Контактна информация</h3>
+                    <p><strong>Телефон:</strong> <a href="tel:+359876544896">+359 87 654 4896</a></p>
+                    <p><strong>Имейл:</strong> <a
+                            href="mailto:office@lifehacksoftware.com">office@lifehacksoftware.com</a></p>
+                    <p><strong>Работно време:</strong> Понеделник - Петък, 9:00 - 18:00</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Изпратете ни съобщение</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="67437623-1ee8-4b9d-b513-8987c5391a29">
+
+                        <!-- Subject for email -->
+                        <input type="hidden" name="subject" value="Ново запитване от сайта LifeHack Software">
+
+                        <!-- From Name (will appear as sender name) -->
+                        <input type="hidden" name="from_name" value="LifeHack Software - Контактна форма">
+
+                        <div class="form-group">
+                            <label for="name">Име *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Имейл *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Компания</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Интересуваща ви услуга</label>
+                            <select id="service" name="service">
+                                <option value="">Изберете...</option>
+                                <option value="Софтуерна разработка">Софтуерна разработка</option>
+                                <option value="QA & Тестване">QA & Тестване</option>
+                                <option value="SEO оптимизация">SEO оптимизация</option>
+                                <option value="META реклама">META реклама</option>
+                                <option value="Друго">Друго</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Съобщение *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <!-- Honeypot for spam protection -->
+                        <input type="checkbox" name="botcheck">
+
+                        <button type="submit" class="btn btn-primary">Изпрати заявка</button>
+                    </form>
+
+                    <!-- Success message -->
+                    <div id="form-success" class="form-message">
+                        Благодарим ви! Вашето съобщение е изпратено успешно.
+                    </div>
+
+                    <!-- Error message -->
+                    <div id="form-error" class="form-message">
+                        Възникна грешка. Моля опитайте отново или ни пишете директно на office@lifehacksoftware.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/chat.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Enhanced form handling
+        (function () {
+            'use strict';
+
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('form-success');
+            const errorMsg = document.getElementById('form-error');
+
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+
+                    // Disable button and show loading
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Изпраща се...';
+
+                    // Hide previous messages
+                    successMsg.classList.remove('show');
+                    errorMsg.classList.remove('show');
+
+                    try {
+                        const formData = new FormData(form);
+
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const data = await response.json();
+
+                        if (data.success) {
+                            // Show success message
+                            successMsg.classList.add('show');
+                            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                            // Reset form after a short delay
+                            setTimeout(() => {
+                                form.reset();
+                                successMsg.classList.remove('show');
+                            }, 1500);
+                        } else {
+                            throw new Error(data.message || 'Грешка при изпращане');
+                        }
+                    } catch (error) {
+                        // Show error message
+                        errorMsg.classList.add('show');
+                        console.error('Form error:', error);
+                    } finally {
+                        // Re-enable button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
