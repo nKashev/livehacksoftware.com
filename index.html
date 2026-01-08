@@ -24,6 +24,44 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LifeHack Software",
+        "url": "https://lifehacksoftware.com",
+        "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
+        "description": "Професионални софтуерни решения, QA тестване, SEO оптимизация и META реклама",
+        "telephone": "+359876544896",
+        "email": "office@lifehacksoftware.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BG"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/lifehack-software"
+        ],
+        "potentialAction": {
+            "@type": "ContactAction",
+            "target": "https://lifehacksoftware.com/contact.html",
+            "name": "Свържете се с LifeHack Software"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Софтуерни услуги",
+            "itemListElement": 
+            [{
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Софтуерна разработка"
+                }
+            }]
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -344,25 +382,6 @@
             </div>
         </div>
     </section>
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "LifeHack Software",
-        "url": "https://lifehacksoftware.com",
-        "logo": "https://lifehacksoftware.com/images/logo.svg",
-        "description": "Професионални софтуерни решения, QA тестване, SEO оптимизация и META реклама",
-        "telephone": "+359876544896",
-        "email": "office@lifehacksoftware.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "BG"
-        },
-        "sameAs": []
-    }
-    </script>
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/chat.js"></script>
