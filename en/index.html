@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LifeHack Software - Professional software solutions, QA testing, SEO optimization and META advertising for your business.">
+    <meta name="keywords" content="software development, QA testing, SEO, META advertising, digital marketing, web applications, mobile applications">
+    <title>LifeHack Software - Software solutions and digital marketing</title>
+    
+    <!-- Canonical and hreflang -->
+    <link rel="canonical" href="https://lifehacksoftware.com/" />
+    <link rel="alternate" hreflang="bg" href="https://lifehacksoftware.com/" />
+    <link rel="alternate" hreflang="en" href="https://lifehacksoftware.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://lifehacksoftware.com/" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="LifeHack Software - Software solutions and digital marketing" />
+    <meta property="og:description" content="Professional software solutions, QA testing, SEO optimization and META advertising for your business." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lifehacksoftware.com/" />
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your partner for <span class="highlight">digital transformation</span></h1>
+                <p class="hero-subtitle">We develop software solutions that turn business challenges into growth opportunities</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Contact us</a>
+                    <a href="services.html" class="btn btn-secondary">View our services</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Clients Showcase with Infinite Scroll -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="clients-header">
+                <h2>Companies that trusted us</h2>
+                <!-- <p>Over 50+ companies choose our solutions</p> -->
+            </div>
+        </div>
+
+        <div class="clients-marquee">
+            <div class="clients-track">
+                <!-- Client 1 -->
+                <a href="https://www.nokia.com/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/nokia.svg" alt="Nokia" loading="lazy" width="150" height="60">
+                </a>
+
+                <!-- Client 2 -->
+                <a href="https://www.vodafone.it" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/vodafone.svg" alt="Vodafone Italy" loading="lazy" width="60"
+                        height="60">
+                </a>
+
+                <!-- Client 3 -->
+                <a href="https://worldline.com/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/worldline-logo.svg" alt="Worldline" loading="lazy" width="150"
+                        height="60">
+                </a>
+
+                <!-- Client 4 -->
+                <a href="https://reformeracademy.pro/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/reformer_academy.svg" alt="Reformer Pilates Academy" loading="lazy" width="150"
+                        height="60">
+                </a>
+
+                <!-- Client 5 -->
+                <a href="https://reformer-pilates.bg/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/reformer_q.svg" alt="Reformer Pilates Q" loading="lazy" width="150"
+                        height="60">
+                </a>
+
+                <!-- Client 6 -->
+                <a href="https://sculptand.beauty/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/sculpt&beauty.svg" alt="Beauty salon Sculpt&Beauty" loading="lazy" width="150"
+                        height="60">
+                </a>
+
+                <!-- Client 7 -->
+                <a href="https://bookings.reformeracademy.pro/janet-reformer/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/janet_logo.png" alt="Reformer Pilates Studio Janet’s Reformer Boutique" loading="lazy" width="130"
+                        height="50">
+                </a>
+
+                <!-- Client 8 -->
+                <a href="https://bookings.reformeracademy.pro/gmfit/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/gmfit.png" alt="GMFIT" loading="lazy" width="150"
+                        height="60">
+                </a>
+
+                <!-- Client 9 -->
+                <a href="https://bookings.reformeracademy.pro/sq-reformer/" target="_blank" rel="noopener" class="client-logo">
+                    <img src="../assets/images/clients/sq_pilates_reformer.svg" alt="SQ Reformer Pilates Studio" loading="lazy" width="150"
+                        height="60">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Infinite Scroll Clients Section */
+        .clients-section {
+            background: #0a0a0a;
+            color: var(--white);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .clients-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .clients-header h2 {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .clients-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.125rem;
+        }
+
+        /* Marquee container */
+        .clients-marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            position: relative;
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 4rem;
+            animation: scroll-left 30s linear infinite;
+            will-change: transform;
+        }
+
+        /* Pause on hover */
+        .clients-marquee:hover .clients-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Client logo styling */
+        .client-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .client-logo:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .client-logo img {
+            max-width: 100%;
+            height: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .client-logo:hover img {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .clients-track {
+                gap: 2rem;
+            }
+
+            .client-logo {
+                min-width: 140px;
+                height: 80px;
+                padding: 1rem;
+            }
+        }
+
+        /* Special handling for colored logos (like Vodafone) */
+
+        /* Default - grayscale for all logos */
+        .client-logo img {
+            filter: grayscale(100%) brightness(0.8);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover - show original colors */
+        .client-logo:hover img {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+
+        /* Alternative: Keep colored logos always visible but dimmed */
+        .client-logo img {
+            filter: brightness(0.8) saturate(0.5);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover img {
+            filter: brightness(1) saturate(1);
+            opacity: 1;
+        }
+
+        /* For dark background (if using black theme) */
+        .clients-section.dark .client-logo img {
+            filter: brightness(2) grayscale(100%);
+        }
+
+        .clients-section.dark .client-logo:hover img {
+            filter: brightness(1) grayscale(0%);
+        }
+    </style>
+
+    <script>
+        // Duplicate logos for seamless infinite scroll
+        (function () {
+            'use strict';
+
+            function initClientsMarquee() {
+                const track = document.querySelector('.clients-track');
+                if (!track) return;
+
+                // Clone all logos for seamless loop
+                const logos = track.innerHTML;
+                track.innerHTML = logos + logos;
+            }
+
+            // Initialize when DOM is loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initClientsMarquee);
+            } else {
+                initClientsMarquee();
+            }
+        })();
+    </script>
+
+    <!-- Services Summary -->
+    <section class="services-summary">
+        <div class="container">
+            <h2 class="section-title">Our services</h2>
+            <p class="section-subtitle">Comprehensive solutions for your digital success</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>We build scalable web and mobile applications with modern technologies tailored to your business needs.</p>
+                    <a href="services.html#software" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>QA & Testing</h3>
+                    <p>We ensure quality at every stage with automated and manual testing for a flawless user experience.</p>
+                    <a href="services.html#qa" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>We improve your online visibility and search rankings with professional SEO strategies.</p>
+                    <a href="services.html#seo" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </div>
+                    <h3>META Advertising</h3>
+                    <p>Effective advertising campaigns on Facebook and Instagram for maximum return on investment.</p>
+                    <a href="services.html#meta" class="service-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start your project?</h2>
+                <p>Get in touch for a free consultation and quotation</p>
+                <a href="contact.html" class="btn btn-light">Request a consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LifeHack Software",
+        "url": "https://lifehacksoftware.com",
+        "logo": "https://lifehacksoftware.com/images/logo.svg",
+        "description": "Professional software solutions, QA testing, SEO optimization and META advertising for your business.",
+        "telephone": "+359876544896",
+        "email": "office@lifehacksoftware.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BG"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="../assets/js/chat.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>
