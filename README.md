@@ -41,6 +41,9 @@ https://lifehacksoftware.com/
 |   |   └── footer.js            # Footer
 │   └── css
 |       └── style.css            # Main stylesheet
+├── robots.txt
+├── llms.txt
+├── sitemap.xml
 └── en/                  # English versions
     ├── index.html
     ├── about.html
