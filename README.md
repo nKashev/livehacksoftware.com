@@ -20,7 +20,11 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
 ├── about.html           # About page
 ├── services.html        # Services page
 ├── portfolio.html       # Portfolio page
+├── portfolio
+|   └── projects
 ├── blog.html            # Blog page
+├── blog
+|   └── blog posts
 ├── contact.html         # Contact page
 ├── privacy.html         # Privacy policy
 ├── terms.html           # Terms of service
@@ -42,7 +46,11 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
     ├── about.html
     ├── services.html
     ├── portfolio.html
+    ├── portfolio
+    |   └── projects
     ├── blog.html
+    ├── blog
+    |   └── blog posts
     ├── contact.html
     ├── privacy.html
     ├── terms.html
