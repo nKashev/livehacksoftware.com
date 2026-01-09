@@ -111,7 +111,7 @@
 					<tr>
 						<th width="80%">URL</th>
 						<th width="5%">Images</th>
-						<th title="Last Modification Time" width="15%">Last Mod.</th>
+						<th title="Last Modification Time" width="15%">Last Modified</th>
 					</tr>
 					</thead>
 					<tbody>
