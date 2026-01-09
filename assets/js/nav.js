@@ -1,4 +1,4 @@
-// Navigation Widget for LifeHack Software
+// Navigation Widget for LifeHack Software (Bulgarian)
 (function() {
     'use strict';
     
@@ -41,9 +41,6 @@
         
         // Set language switch link
         setLanguageLink();
-        
-        // Initialize mobile menu toggle
-        // initMobileMenu();
     }
     
     // Function to set active page based on current URL
@@ -61,13 +58,16 @@
             // Remove active class from all links
             link.classList.remove('active');
             
-            // Check if this is the current page
+            // Check if this is the current page - EXACT MATCH ONLY
             if (
+                // Homepage checks
                 (currentPage === 'index.html' && linkPage === 'index') ||
                 (currentPage === '' && linkPage === 'index') ||
-                (currentPage === '/' && linkPage === 'index') ||
-                linkHref === currentPage ||
-                currentPage.includes(linkPage)
+                (currentPath === '/' && linkPage === 'index') ||
+                // Exact page match
+                (linkHref === currentPage) ||
+                // Page name match (e.g., about.html matches about)
+                (currentPage === linkPage + '.html')
             ) {
                 link.classList.add('active');
             }
@@ -83,18 +83,19 @@
         const activeLink = document.querySelector('.nav-menu a.active[data-page]');
         
         if (activeLink) {
-            const activeHref = activeLink.getAttribute('href');
+            const activePage = activeLink.getAttribute('data-page');
             
             // If it's the homepage
-            if (activeHref === '/') {
-                langLink.setAttribute('href', 'en/index.html');
+            if (activePage === 'index') {
+                langLink.setAttribute('href', 'en/');
             } else {
-                // For other pages, prepend 'en/' to the href
+                // For other pages, prepend 'en/'
+                const activeHref = activeLink.getAttribute('href');
                 langLink.setAttribute('href', 'en/' + activeHref);
             }
         } else {
             // Default fallback
-            langLink.setAttribute('href', 'en/index.html');
+            langLink.setAttribute('href', 'en/');
         }
     }
     
