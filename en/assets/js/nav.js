@@ -1,4 +1,4 @@
-// Navigation Widget for LifeHack Software (English Version)
+// Navigation Widget for LifeHack Software (English)
 (function() {
     'use strict';
     
@@ -8,7 +8,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
+                    <a href="/en/" class="logo">
                         <img src="../assets/images/logo.svg" alt="LifeHack Software Logo">
                         <span>LifeHack Software</span>
                     </a>
@@ -18,13 +18,13 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html" data-page="index">Home</a></li>
+                        <li><a href="/en/" data-page="index">Home</a></li>
                         <li><a href="about.html" data-page="about">About</a></li>
                         <li><a href="services.html" data-page="services">Services</a></li>
                         <!-- <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
                         <li><a href="blog.html" data-page="blog">Blog</a></li> -->
                         <li><a href="contact.html" data-page="contact">Contact</a></li>
-                        <li class="lang-switch"><a href="../" id="lang-switch-link">БГ</a></li>
+                        <li class="lang-switch"><a href="/" id="lang-switch-link">БГ</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,9 +41,6 @@
         
         // Set language switch link
         setLanguageLink();
-        
-        // Initialize mobile menu toggle
-        // initMobileMenu();
     }
     
     // Function to set active page based on current URL
@@ -61,12 +58,17 @@
             // Remove active class from all links
             link.classList.remove('active');
             
-            // Check if this is the current page
+            // Check if this is the current page - EXACT MATCH ONLY
             if (
+                // Homepage checks
                 (currentPage === 'index.html' && linkPage === 'index') ||
                 (currentPage === '' && linkPage === 'index') ||
-                linkHref === currentPage ||
-                currentPage.includes(linkPage)
+                (currentPath === '/en/' && linkPage === 'index') ||
+                (currentPath === '/en/index.html' && linkPage === 'index') ||
+                // Exact page match
+                (linkHref === currentPage) ||
+                // Page name match (e.g., about.html matches about)
+                (currentPage === linkPage + '.html')
             ) {
                 link.classList.add('active');
             }
@@ -82,18 +84,19 @@
         const activeLink = document.querySelector('.nav-menu a.active[data-page]');
         
         if (activeLink) {
-            const activeHref = activeLink.getAttribute('href');
+            const activePage = activeLink.getAttribute('data-page');
             
             // If it's the homepage
-            if (activeHref === 'index.html') {
-                langLink.setAttribute('href', '../');
+            if (activePage === 'index') {
+                langLink.setAttribute('href', '/');
             } else {
-                // For other pages, go back to root and add page
-                langLink.setAttribute('href', '../' + activeHref);
+                // For other pages, go to root and add page
+                const activeHref = activeLink.getAttribute('href');
+                langLink.setAttribute('href', '/' + activeHref);
             }
         } else {
             // Default fallback
-            langLink.setAttribute('href', '../');
+            langLink.setAttribute('href', '/');
         }
     }
     
