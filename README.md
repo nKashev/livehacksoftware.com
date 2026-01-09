@@ -15,7 +15,7 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
 ## Structure
 
 ```
-/app/static-site/
+https://lifehacksoftware.com/
 ├── index.html           # Homepage (Bulgarian)
 ├── about.html           # About page
 ├── services.html        # Services page
