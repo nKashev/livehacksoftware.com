@@ -8,7 +8,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <img src="assets/images/logo.svg" alt="LifeHack Software Logo">
                         <span>LifeHack Software</span>
                     </a>
@@ -18,7 +18,7 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html" data-page="index">Начало</a></li>
+                        <li><a href="/" data-page="index">Начало</a></li>
                         <li><a href="about.html" data-page="about">За нас</a></li>
                         <li><a href="services.html" data-page="services">Услуги</a></li>
                         <!-- <li><a href="portfolio.html" data-page="portfolio">Портфолио</a></li>
@@ -86,7 +86,7 @@
             const activeHref = activeLink.getAttribute('href');
             
             // If it's the homepage
-            if (activeHref === 'index.html') {
+            if (activeHref === '/') {
                 langLink.setAttribute('href', 'en/index.html');
             } else {
                 // For other pages, prepend 'en/' to the href
