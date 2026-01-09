@@ -86,14 +86,14 @@
             
             // If it's the homepage
             if (activeHref === 'index.html') {
-                langLink.setAttribute('href', '../index.html');
+                langLink.setAttribute('href', '../');
             } else {
                 // For other pages, go back to root and add page
                 langLink.setAttribute('href', '../' + activeHref);
             }
         } else {
             // Default fallback
-            langLink.setAttribute('href', '../index.html');
+            langLink.setAttribute('href', '../');
         }
     }
     
