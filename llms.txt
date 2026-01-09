@@ -1,6 +1,3 @@
-# llms.txt — LifeHack Software
-# https://lifehacksoftware.com
-
 User-agent: *
 Allow: /
 
@@ -15,7 +12,7 @@ Primary-topics:
 - Digital marketing
 - META advertising
 - Software development
-- Quality Assurance (QA)
+- Quality Assurance
 
 Canonical-site: https://lifehacksoftware.com/
 Contact: office@lifehacksoftware.com
