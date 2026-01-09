@@ -24,6 +24,7 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
 ├── contact.html         # Contact page
 ├── privacy.html         # Privacy policy
 ├── terms.html           # Terms of service
+├── 404.html
 ├── assets
 │   ├── images
 |   |   └── logo.svg
@@ -45,6 +46,7 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
     ├── contact.html
     ├── privacy.html
     ├── terms.html
+    ├── 404.html
     └── assets
         └── js
             └── nav.js               # Header
