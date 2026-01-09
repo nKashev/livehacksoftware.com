@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страницата не е намерена | LifeHack Software</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8fbff 0%, #ede7e0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .error-code {
+            font-size: 10rem;
+            font-weight: 900;
+            color: #046bd2;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 0 rgba(4, 107, 210, 0.1);
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        
+        .error-message {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #046bd2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+            box-shadow: 0 4px 15px rgba(4, 107, 210, 0.3);
+        }
+        
+        .btn-home:hover {
+            background: #035aa8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(4, 107, 210, 0.4);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" 
+                  font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#046bd2">
+                &lt;LH/&gt;
+            </text>
+        </svg>
+        
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Страницата не е намерена</h2>
+        <p class="error-message">
+            За съжаление, страницата, която търсите, не съществува или е била премествана.
+        </p>
+        <a href="/" class="btn-home">Към началната страница</a>
+    </div>
+</body>
+</html>
