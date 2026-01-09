@@ -1,0 +1,21 @@
+# llms.txt — LifeHack Software
+# https://lifehacksoftware.com
+
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /404.html
+
+Preferred-language: bg, en
+
+Primary-topics:
+- Website development
+- SEO optimization
+- Digital marketing
+- META advertising
+- Software development
+- Quality Assurance (QA)
+
+Canonical-site: https://lifehacksoftware.com/
+Contact: office@lifehacksoftware.com
