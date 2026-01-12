@@ -57,6 +57,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://lifehacksoftware.com/#organization",
+  "inLanguage": "bg",
   "name": "LifeHack Software",
   "url": "https://lifehacksoftware.com",
   "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
@@ -98,4 +99,5 @@
     }
 
 })();
+
 
