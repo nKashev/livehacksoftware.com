@@ -51,26 +51,29 @@
     
     // Create schema.org structured data
 	const schemaHTML = `
-        <!-- JSON-LD Structured Data -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "@id": "https://lifehacksoftware.com/#organization",
-                "name": "LifeHack Software",
-                "url": "https://lifehacksoftware.com",
-                "logo": "https://lifehacksoftware.com/assets/logo.svg",
-                "sameAs": [
-                    "https://www.linkedin.com/company/lifehack-software"
-                ],
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "customer support",
-                    "telephone": "+359876544896",
-                    "email": "office@lifehacksoftware.com"
-                }
-            }
-        </script>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://lifehacksoftware.com/#organization",
+  "name": "LifeHack Software",
+  "url": "https://lifehacksoftware.com",
+  "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
+  "description": "LifeHack Software provides software development, QA testing, SEO optimization, and digital marketing for business clients.",
+  "sameAs": [
+    "https://www.linkedin.com/company/lifehack-software"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "telephone": "+359876544896",
+    "email": "office@lifehacksoftware.com",
+    "areaServed": "BG",
+    "availableLanguage": ["bg", "en"]
+  }
+}
+</script>
     `;
     
     // Initialize footer when DOM is ready
@@ -95,3 +98,4 @@
     }
 
 })();
+
