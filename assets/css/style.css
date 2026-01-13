@@ -166,22 +166,25 @@ body {
     }
 
     .logo span {
-        display: blok;
+        display: block;
     }
     
-    /* Mobile menu styles */
+    /* Mobile menu styles with scrolling */
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
         width: 280px;
         height: 100vh;
+        max-height: 100vh; /* Don't exceed viewport */
         background: var(--white);
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
         padding: 80px 20px 20px;
         transition: right 0.3s ease;
         z-index: 1000;
-        overflow-y: auto;
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* Smooth iOS scrolling */
         flex-direction: column;
         gap: 0;
     }
@@ -194,10 +197,12 @@ body {
         margin: 0;
         width: 100%;
         border-bottom: 1px solid var(--light-gray);
+        flex-shrink: 0; /* Don't let items shrink */
     }
     
     .nav-menu li:last-child {
         border-bottom: none;
+        margin-bottom: 30px; /* Extra space at bottom for comfortable scrolling */
     }
     
     .nav-menu a {
@@ -210,7 +215,7 @@ body {
         display: none;
     }
     
-    /* Lang switch on mobile */
+    /* Lang switch on mobile with flag */
     .lang-switch {
         margin-top: 1rem;
         padding-top: 1rem;
@@ -218,13 +223,25 @@ body {
     }
     
     .lang-switch a {
-        display: inline-block !important;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 0.5rem;
         width: auto !important;
         padding: 0.6rem 1.2rem !important;
         text-align: center;
-        border: 2px solid var(--primary) !important;
+        /* border: 2px solid var(--primary) !important; */
         border-radius: 6px;
         background: transparent;
+        font-weight: 600;
+    }
+    
+    .lang-switch a .flag-icon {
+        width: 30px;
+        height: 20px;
+        object-fit: cover;
+        border-radius: 2px;
+        border: solid 1px var(--primary);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
     
     /* Overlay when menu is open */
@@ -237,6 +254,24 @@ body {
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         z-index: 999;
+    }
+}
+
+/* Desktop - flag icon in nav */
+@media (min-width: 1025px) {
+    .lang-switch a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .lang-switch a .flag-icon {
+        width: 30px;
+        height: 20px;
+        object-fit: cover;
+        border-radius: 2px;
+        border: solid 1px var(--primary);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     }
 }
 
