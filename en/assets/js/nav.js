@@ -24,7 +24,7 @@
                         <!-- <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
                         <li><a href="blog.html" data-page="blog">Blog</a></li> -->
                         <li><a href="contact.html" data-page="contact">Contact</a></li>
-                        <li class="lang-switch"><a href="/" id="lang-switch-link">БГ</a></li>
+                        <li class="lang-switch"><a href="/" id="lang-switch-link"><img src="../assets/images/flags/bg.svg" alt="Български" class="flag-icon"><span>БГ</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -116,3 +116,4 @@
         initNav();
     }
 })();
+
