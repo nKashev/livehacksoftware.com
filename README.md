@@ -76,8 +76,8 @@ https://lifehacksoftware.com/
 
 ## Contact Information
 
-- Phone: [+359 87 654 4896](tel:+359876544896)
-- Email: [office@lifehacksoftware.com](mailto:office@lifehacksoftware.com?subject=GitHub)
+- WhatsApp: [+359 89 980 7751](https://wa.me/359899807751)
+- Email: [office@lifehacksoftware.com](mailto:office@lifehacksoftware.com?subject=LifeHack_in_GitHub)
 
 ## Services
 
