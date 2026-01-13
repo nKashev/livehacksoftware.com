@@ -76,7 +76,7 @@ https://lifehacksoftware.com/
 
 ## Contact Information
 
-- Phone: +359 87 654 4896
+- Phone: [+359 87 654 4896](tel:+359876544896)
 - Email: office@lifehacksoftware.com
 
 ## Services
