@@ -44,6 +44,7 @@
                     </div>
                     <p>&nbsp;</p>
                     <p>&copy; 2025<span id="current-year"></span> LifeHack Software. All rights reserved.</p>
+                    <p>&nbsp;</p>
                 </div>
             </div>
         </footer>
@@ -99,4 +100,5 @@
     }
 
 })();
+
 
