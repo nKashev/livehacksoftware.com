@@ -80,23 +80,32 @@
         const langLink = document.getElementById('lang-switch-link');
         if (!langLink) return;
         
-        // Find the active link
-        const activeLink = document.querySelector('.nav-menu a.active[data-page]');
+        const currentPath = window.location.pathname;
+        const currentPage = currentPath.split('/').pop() || 'index.html';
         
-        if (activeLink) {
-            const activePage = activeLink.getAttribute('data-page');
-            
-            // If it's the homepage
-            if (activePage === 'index') {
-                langLink.setAttribute('href', '/');
-            } else {
-                // For other pages, go to root and add page
-                const activeHref = activeLink.getAttribute('href');
-                langLink.setAttribute('href', '/' + activeHref);
-            }
+        // Page mapping for language switch (EN → BG)
+        const pageMap = {
+            'index.html': '/',
+            '': '/',
+            'about.html': '/about.html',
+            'services.html': '/services.html',
+            'portfolio.html': '/portfolio.html',
+            'blog.html': '/blog.html',
+            'contact.html': '/contact.html',
+            'privacy.html': '/privacy.html',
+            'terms.html': '/terms.html'
+        };
+        
+        // Set the link based on current page
+        if (pageMap[currentPage]) {
+            langLink.setAttribute('href', pageMap[currentPage]);
         } else {
-            // Default fallback
-            langLink.setAttribute('href', '/');
+            // Fallback: try to construct the path
+            if (currentPage && currentPage !== '/') {
+                langLink.setAttribute('href', '/' + currentPage);
+            } else {
+                langLink.setAttribute('href', '/');
+            }
         }
     }
     
@@ -107,5 +116,3 @@
         initNav();
     }
 })();
-
-
