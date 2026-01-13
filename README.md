@@ -1,7 +1,7 @@
 # LifeHack Software - Corporate Website 
-[![Open LifeHask Software](https://img.shields.io/badge/Open-LifeHack-blue?style=for-the-badge)](https://lifehacksoftware.com/)
-
 A professional, SEO-optimized static corporate website for LifeHack Software.
+
+[![Open LifeHask Software](https://img.shields.io/badge/Open-LifeHack-blue?style=for-the-badge)](https://lifehacksoftware.com/)
 
 ## Features
 
