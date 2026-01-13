@@ -76,7 +76,7 @@ https://lifehacksoftware.com/
 
 ## Contact Information
 
-- WhatsApp: [+359 89 980 7751](https://wa.me/359899807751)
+- WhatsApp: <a href="https://wa.me/359899807751" style="text-decoration: none; color: #046bd2;" target="_blank" rel="noopener noreferrer">+359 89 980 7751</a>
 - Email: [office@lifehacksoftware.com](mailto:office@lifehacksoftware.com?subject=LifeHack_in_GitHub)
 
 ## Services
