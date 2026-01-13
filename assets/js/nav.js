@@ -24,7 +24,7 @@
                         <!-- <li><a href="portfolio.html" data-page="portfolio">Портфолио</a></li>
                         <li><a href="blog.html" data-page="blog">Блог</a></li> -->
                         <li><a href="contact.html" data-page="contact">Контакти</a></li>
-                        <li class="lang-switch"><a href="en/" id="lang-switch-link">EN</a></li>
+                        <li class="lang-switch"><a href="en/" id="lang-switch-link"><img src="assets/images/flags/gb.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -115,3 +115,4 @@
         initNav();
     }
 })();
+
