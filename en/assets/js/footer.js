@@ -59,7 +59,7 @@
   "@id": "https://lifehacksoftware.com/#organization",
   "inLanguage": "en",
   "name": "LifeHack Software",
-  "url": "https://lifehacksoftware.com",
+  "url": "https://lifehacksoftware.com/en/",
   "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
   "description": "LifeHack Software provides software development, QA testing, SEO optimization, and digital marketing for business clients.",
   "sameAs": [
@@ -99,3 +99,4 @@
     }
 
 })();
+
