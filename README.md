@@ -1,4 +1,5 @@
-# LifeHack Software - Corporate Website
+# LifeHack Software - Corporate Website 
+[![Open LifeHask Software](https://img.shields.io/badge/Open-LifeHack-blue?style=for-the-badge)](https://lifehacksoftware.com/)
 
 A professional, SEO-optimized static corporate website for LifeHack Software.
 
@@ -11,6 +12,9 @@ A professional, SEO-optimized static corporate website for LifeHack Software.
 - **Professional B2B design** - Clean corporate palette
 - **Fast and lightweight** - Minimal JS, optimized CSS
 - **Chat widget** - Integrated chat functionality
+- **English language pages (/en/)**
+- **web3forms API** - integration for contact form
+- **sitemap.xml, llms.txt and robots.txt**
 
 ## Structure
 
@@ -63,6 +67,7 @@ https://lifehacksoftware.com/
             └── nav.js               # Header
             └── footer.js            # Footer
 ```
+
 ## Corporate Colors
 
 - Primary: #046bd2
@@ -105,11 +110,8 @@ Simply open `index.html` in a web browser or serve the files with any static web
 
 ## Future Enhancements
 
-- English language pages (/en/)
-- Zoho API integration for contact form
 - Additional portfolio case studies
 - Blog content
-- Sitemap.xml and robots.txt
 
 ## License
 
