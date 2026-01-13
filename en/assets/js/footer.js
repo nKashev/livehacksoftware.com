@@ -31,8 +31,8 @@
                     <div class="footer-col">
                         <h4>Legal information</h4>
                         <ul>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="terms.html">Terms and Conditions</a></li>
+                            <li><a href="privacy.html" data-page="privacy">Политика за поверителност</a></li>
+                            <li><a href="terms.html" data-page="terms">Общи условия</a></li>
                         </ul>
                     </div>
                 </div>
@@ -99,5 +99,3 @@
     }
 
 })();
-
-
