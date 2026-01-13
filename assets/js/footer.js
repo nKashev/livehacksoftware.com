@@ -42,7 +42,7 @@
                             <i class="fa-brands fa-linkedin fa-xl" style="color: #0077B5;"></i>
                         </a>
                     </div>
-                    <p> </p>
+                    <p>&nbsp;</p>
                     <p>© 2025<span id="current-year"></span> LifeHack Software. Всички права запазени.</p>
                 </div>
             </div>
@@ -99,3 +99,4 @@
 		initFooter();
 	}
 })();
+
