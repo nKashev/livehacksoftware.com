@@ -68,11 +68,6 @@ body {
     transition: var(--transition);
 }
 
-.logo img {
-    width: 90px;
-    height: auto;
-}
-
 .logo:hover {
     opacity: 0.8;
 }
@@ -166,8 +161,12 @@ body {
         display: flex;
     }
     
-    .logo span {
+    .logo img {
         display: none;
+    }
+
+    .logo span {
+        display: blok;
     }
     
     /* Mobile menu styles */
@@ -238,6 +237,16 @@ body {
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         z-index: 999;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        display: block;
+    }
+
+    .logo span {
+        display: none;
     }
 }
 
