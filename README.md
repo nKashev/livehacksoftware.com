@@ -41,6 +41,7 @@ https://lifehacksoftware.com/
 │   ├── js
 |   |   └── main.js              # Main JavaScript
 |   |   └── chat.js              # Chat widget
+|   |   └── form.js              # Contact form handler
 |   |   └── nav.js               # Header
 |   |   └── footer.js            # Footer
 │   └── css
