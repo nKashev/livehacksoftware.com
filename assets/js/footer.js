@@ -1,9 +1,9 @@
 // Footer Widget for LifeHack Software
-(function() {
-    'use strict';
-    
-    // Create footer HTML
-    const footerHTML = `
+(function () {
+	'use strict';
+
+	// Create footer HTML
+	const footerHTML = `
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
@@ -15,10 +15,10 @@
                     <div class="footer-col">
                         <h4>Навигация</h4>
                         <ul>
-                            <li><a href="about.html">За нас</a></li>
-                            <li><a href="services.html">Услуги</a></li>
-                            <!-- <li><a href="portfolio.html">Портфолио</a></li>
-                            <li><a href="blog.html">Блог</a></li> -->
+                            <li><a href="about.html" data-page="about">За нас</a></li>
+                            <li><a href="services.html" data-page="services">Услуги</a></li>
+                            <!-- <li><a href="portfolio.html" data-page="portfolio">Портфолио</a></li>
+                            <li><a href="blog.html" data-page="blog">Блог</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -31,8 +31,8 @@
                     <div class="footer-col">
                         <h4>Правна информация</h4>
                         <ul>
-                            <li><a href="privacy.html">Политика за поверителност</a></li>
-                            <li><a href="terms.html">Общи условия</a></li>
+                            <li><a href="privacy.html" data-page="privacy">Политика за поверителност</a></li>
+                            <li><a href="terms.html" data-page="terms">Общи условия</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,14 +42,15 @@
                             <i class="fa-brands fa-linkedin fa-xl" style="color: #0077B5;"></i>
                         </a>
                     </div>
-                    <p>&nbsp;</p>
-                    <p>&copy; 2025<span id="current-year"></span> LifeHack Software. Всички права запазени.</p>
+                    <p> </p>
+                    <p>© 2025<span id="current-year"></span> LifeHack Software. Всички права запазени.</p>
                 </div>
             </div>
         </footer>
     `;
-    
-    // Create schema.org structured data
+
+
+	// Create schema.org structured data
 	const schemaHTML = `
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -57,7 +58,6 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://lifehacksoftware.com/#organization",
-  "inLanguage": "bg",
   "name": "LifeHack Software",
   "url": "https://lifehacksoftware.com",
   "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
@@ -76,28 +76,26 @@
 }
 </script>
     `;
-    
-    // Initialize footer when DOM is ready
-    function initFooter() {
-        // Insert footer at the end of body
-        document.body.insertAdjacentHTML('beforeend', footerHTML);
-        document.body.insertAdjacentHTML('beforeend', schemaHTML);
-        
-        // Update copyright year
-        const yearSpan = document.getElementById('current-year');
-        const currentYear = new Date().getFullYear();
-        if (currentYear > 2025) {
-            yearSpan.textContent = '–' + currentYear;
-        }
-    }
-    
-    // Initialize when DOM is loaded
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initFooter);
-    } else {
-        initFooter();
-    }
 
+
+	// Initialize footer when DOM is ready
+	function initFooter() {
+		// Insert footer at the end of body
+		document.body.insertAdjacentHTML('beforeend', footerHTML);
+		document.body.insertAdjacentHTML('beforeend', schemaHTML);
+
+		// Update copyright year
+		const yearSpan = document.getElementById('current-year');
+		const currentYear = new Date().getFullYear();
+		if (currentYear > 2025) {
+			yearSpan.textContent = '–' + currentYear;
+		}
+	}
+
+	// Initialize when DOM is loaded
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initFooter);
+	} else {
+		initFooter();
+	}
 })();
-
-
