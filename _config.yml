@@ -1,31 +1,5 @@
 # За clean URLs, sitemap и minification
 permalink: /:basename/
 
-plugins:
-  # - jekyll-sitemap
-  - jekyll-minifier
-
-# Exclude от sitemap и build
-# exclude:
-#   - README.md
-#   - node_modules/
-#   - package.json
-
-# Defaults - за да контролираме sitemap inclusion
-# defaults:
-#   - scope:
-#       path: ""
-#     values:
-#       sitemap: true
-
-jekyll-minifier:
-  compress_javascript: true
-  compress_css: true
-  compress_html: true
-  remove_spaces_inside_tags: true
-  remove_multi_spaces: true
-  remove_comments: true
-  remove_intertag_spaces: false
-
 sass:
   style: compressed
