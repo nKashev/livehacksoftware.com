@@ -2,7 +2,7 @@
 permalink: /:basename/
 
 plugins:
-  - jekyll-sitemap
+  # - jekyll-sitemap
   - jekyll-minifier
 
 # Exclude от sitemap и build
@@ -12,11 +12,11 @@ exclude:
   - package.json
 
 # Defaults - за да контролираме sitemap inclusion
-defaults:
-  - scope:
-      path: ""
-    values:
-      sitemap: true
+# defaults:
+#   - scope:
+#       path: ""
+#     values:
+#       sitemap: true
 
 jekyll-minifier:
   compress_javascript: true
