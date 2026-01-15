@@ -15,10 +15,10 @@
                     <div class="footer-col">
                         <h4>Навигация</h4>
                         <ul>
-                            <li><a href="about.html" data-page="about">За нас</a></li>
-                            <li><a href="services.html" data-page="services">Услуги</a></li>
-                            <!-- <li><a href="portfolio.html" data-page="portfolio">Портфолио</a></li>
-                            <li><a href="blog.html" data-page="blog">Блог</a></li> -->
+                            <li><a href="/about/" data-page="about">За нас</a></li>
+                            <li><a href="/services/" data-page="services">Услуги</a></li>
+                            <!-- <li><a href="/portfolio/" data-page="portfolio">Портфолио</a></li>
+                            <li><a href="/blog/" data-page="blog">Блог</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -100,6 +100,7 @@
 		initFooter();
 	}
 })();
+
 
 
 
