@@ -24,7 +24,7 @@
                         <!-- <li><a href="/portfolio/" data-page="portfolio">Портфолио</a></li>
                         <li><a href="/blog/" data-page="blog">Блог</a></li> -->
                         <li><a href="/contact/" data-page="contact">Контакти</a></li>
-                        <li class="lang-switch"><a href="/en/" id="lang-switch-link"><img src="/assets/images/flags/en.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
+                        <li class="lang-switch"><a href="/en/" id="lang-switch-link"><img src="/assets/images/flags/gb.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -113,3 +113,4 @@
         initNav();
     }
 })();
+
