@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "LifeHack Software",
+    "name_for_model": "lifehack_software",
+    "description_for_human": "Website development, SEO optimization, and digital marketing services in Bulgaria.",
+    "description_for_model": "Information about LifeHack Software's services including website development, SEO optimization, digital marketing (META ads, Google Ads), software development, and QA testing. Located in Plovdiv, Bulgaria. Bilingual support (Bulgarian/English).",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://lifehacksoftware.com/llms.txt"
+    },
+    "logo_url": "https://lifehacksoftware.com/assets/images/logo.svg",
+    "contact_email": "office@lifehacksoftware.com",
+    "legal_info_url": "https://lifehacksoftware.com/terms/"
+}
