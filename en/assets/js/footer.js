@@ -15,10 +15,10 @@
                     <div class="footer-col">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="/about/" data-page="about">About</a></li>
-                            <li><a href="/services/" data-page="services">Services</a></li>
-                            <!-- <li><a href="/portfolio/" data-page="portfolio">Portfolio</a></li>
-                            <li><a href="/blog/" data-page="blog">Blog</a></li> -->
+                            <li><a href="/en/about/" data-page="about">About</a></li>
+                            <li><a href="/en/services/" data-page="services">Services</a></li>
+                            <!-- <li><a href="/en/portfolio/" data-page="portfolio">Portfolio</a></li>
+                            <li><a href="/en/blog/" data-page="blog">Blog</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -31,8 +31,8 @@
                     <div class="footer-col">
                         <h4>Legal information</h4>
                         <ul>
-                            <li><a href="/privacy/" data-page="privacy">Privacy Policy</a></li>
-                            <li><a href="/terms/" data-page="terms">Terms and Conditions</a></li>
+                            <li><a href="/en/privacy/" data-page="privacy">Privacy Policy</a></li>
+                            <li><a href="/en/terms/" data-page="terms">Terms and Conditions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,6 +100,7 @@
     }
 
 })();
+
 
 
 
