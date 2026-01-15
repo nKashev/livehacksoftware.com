@@ -1,14 +1,47 @@
-// Navigation Widget for LifeHack Software (Bulgarian)
 (function() {
     'use strict';
     
+    // Detect language from URL
+    const isEnglish = window.location.pathname.startsWith('/en/');
+    const lang = isEnglish ? 'en' : 'bg';
+    
+    // Translations
+    const t = {
+        bg: {
+            home: 'Начало',
+            about: 'За нас',
+            services: 'Услуги',
+            portfolio: 'Портфолио',
+            blog: 'Блог',
+            contact: 'Контакти',
+            langFlag: '/assets/images/flags/gb.svg',
+            langAlt: 'English',
+            langCode: 'EN',
+            langLink: '/en/'
+        },
+        en: {
+            home: 'Home',
+            about: 'About',
+            services: 'Services',
+            portfolio: 'Portfolio',
+            blog: 'Blog',
+            contact: 'Contacts',
+            langFlag: '/assets/images/flags/bg.svg',
+            langAlt: 'Български',
+            langCode: 'БГ',
+            langLink: '/'
+        }
+    };
+    
+    const translations = t[lang];
+    const basePath = isEnglish ? '/en' : '';
+    
     // Create navigation HTML
     const navHTML = `
-        <!-- Navigation -->
         <nav class="navbar">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="/" class="logo">
+                    <a href="${basePath}/" class="logo">
                         <img src="/assets/images/logo.svg" width="40px" height="auto" alt="LifeHack Software Logo">
                         <span>LifeHack Software</span>
                     </a>
@@ -18,99 +51,74 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="/" data-page="index">Начало</a></li>
-                        <li><a href="/about/" data-page="about">За нас</a></li>
-                        <li><a href="/services/" data-page="services">Услуги</a></li>
-                        <!-- <li><a href="/portfolio/" data-page="portfolio">Портфолио</a></li>
-                        <li><a href="/blog/" data-page="blog">Блог</a></li> -->
-                        <li><a href="/contact/" data-page="contact">Контакти</a></li>
-                        <li class="lang-switch"><a href="/en/" id="lang-switch-link"><img src="/assets/images/flags/gb.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
+                        <li><a href="${basePath}/" data-page="index">${translations.home}</a></li>
+                        <li><a href="${basePath}/about/" data-page="about">${translations.about}</a></li>
+                        <li><a href="${basePath}/services/" data-page="services">${translations.services}</a></li>
+                        <li><a href="${basePath}/contact/" data-page="contact">${translations.contact}</a></li>
+                        <li class="lang-switch">
+                            <a href="${translations.langLink}" id="lang-switch-link">
+                                <img src="${translations.langFlag}" alt="${translations.langAlt}" class="flag-icon">
+                                <span>${translations.langCode}</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     `;
     
-    // Initialize navigation when DOM is ready
+    // Initialize navigation
     function initNav() {
-        // Insert navigation at the beginning of body
         document.body.insertAdjacentHTML('afterbegin', navHTML);
-        
-        // Set active page
         setActivePage();
-        
-        // Set language switch link
         setLanguageLink();
     }
     
-    // Function to set active page based on current URL
     function setActivePage() {
-        const currentPath = window.location.pathname;
-        
-        // Normalize path - remove trailing slash for comparison
-        const normalizedPath = currentPath.replace(/\/$/, '') || '';
-        
-        // Get all nav links
+        const currentPath = window.location.pathname.replace(/\/$/, '') || basePath;
         const navLinks = document.querySelectorAll('.nav-menu a[data-page]');
         
         navLinks.forEach(link => {
-            const linkPage = link.getAttribute('data-page');
             const linkHref = link.getAttribute('href').replace(/\/$/, '');
-            
-            // Remove active class from all links
             link.classList.remove('active');
             
-            // Check if this is the current page
-            if (
-                // Homepage checks
-                ((normalizedPath === '' || normalizedPath === '/index') && linkPage === 'index') ||
-                // Exact URL match
-                (normalizedPath === linkHref) ||
-                // Page name match
-                (normalizedPath === '/' + linkPage)
-            ) {
+            if (currentPath === linkHref || 
+                (currentPath === basePath && link.getAttribute('data-page') === 'index')) {
                 link.classList.add('active');
             }
         });
     }
     
-    // Function to set language switch link based on active page
     function setLanguageLink() {
         const langLink = document.getElementById('lang-switch-link');
         if (!langLink) return;
         
         const currentPath = window.location.pathname;
-        
-        // Page mapping for language switch (BG → EN)
-        const pageMap = {
+        const pageMap = isEnglish ? {
+            '/en/': '/',
+            '/en/about/': '/about/',
+            '/en/services/': '/services/',
+            '/en/contact/': '/contact/',
+            '/en/privacy/': '/privacy/',
+            '/en/terms/': '/terms/'
+        } : {
             '/': '/en/',
-            '/index/': '/en/',
             '/about/': '/en/about/',
             '/services/': '/en/services/',
-            '/portfolio/': '/en/portfolio/',
-            '/blog/': '/en/blog/',
             '/contact/': '/en/contact/',
             '/privacy/': '/en/privacy/',
             '/terms/': '/en/terms/'
         };
         
-        // Normalize current path
         const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+        const switchTo = pageMap[normalizedPath] || (isEnglish ? '/' : '/en/');
         
-        // Set the link based on current page
-        if (pageMap[normalizedPath]) {
-            langLink.setAttribute('href', pageMap[normalizedPath]);
-        } else {
-            // Fallback: add /en/ prefix
-            langLink.setAttribute('href', '/en' + currentPath);
-        }
+        langLink.setAttribute('href', switchTo);
     }
     
-    // Initialize when DOM is loaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initNav);
     } else {
         initNav();
     }
 })();
-
