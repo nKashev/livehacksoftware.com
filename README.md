@@ -42,13 +42,16 @@ https://lifehacksoftware.com/
 |   |   └── main.js              # Main JavaScript
 |   |   └── chat.js              # Chat widget
 |   |   └── form.js              # Contact form handler
-|   |   └── nav.js               # Header
+|   |   └── nav.js               # Header (BG/EN)
 |   |   └── footer.js            # Footer
 │   └── css
 |       └── style.css            # Main stylesheet
+├── _config.yml
 ├── robots.txt
 ├── llms.txt
 ├── sitemap.xml
+├── .well-known
+|   └── ai-plugin.json
 └── en/                  # English versions
     ├── index.html
     ├── about.html
@@ -65,7 +68,6 @@ https://lifehacksoftware.com/
     ├── 404.html
     └── assets
         └── js
-            └── nav.js               # Header
             └── footer.js            # Footer
 ```
 
