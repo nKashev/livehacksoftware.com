@@ -1,9 +1,61 @@
+# LifeHack Software - Robots Configuration
+# https://lifehacksoftware.com
+
 User-agent: *
 Allow: /
 
+# Block assets and technical files
 Disallow: /assets/js/
 Disallow: /assets/css/
-Disallow: /*.json$
-Disallow: /*?*
+Disallow: /assets/images/favicon.ico
+Disallow: /404.html
+Disallow: /404
 
+# Block pages under development
+Disallow: /blog/
+Disallow: /blog.html
+Disallow: /portfolio/
+Disallow: /portfolio.html
+Disallow: /en/blog/
+Disallow: /en/blog.html
+Disallow: /en/portfolio/
+Disallow: /en/portfolio.html
+
+# Allow important assets for rendering
+Allow: /assets/images/*.webp
+Allow: /assets/images/*.svg
+Allow: /assets/images/*.png
+Allow: /assets/images/*.jpg
+
+# Sitemaps
 Sitemap: https://lifehacksoftware.com/sitemap.xml
+
+# Crawl rate (optional - за да не претоварваш сървъра)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Disallow: /blog/
+Disallow: /portfolio/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: bingbot
+Allow: /
+Disallow: /blog/
+Disallow: /portfolio/
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
