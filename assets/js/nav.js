@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="assets/images/logo.svg" width="40px" height="auto" alt="LifeHack Software Logo">
+                        <img src="/assets/images/logo.svg" width="40px" height="auto" alt="LifeHack Software Logo">
                         <span>LifeHack Software</span>
                     </a>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -19,12 +19,12 @@
                     </button>
                     <ul class="nav-menu">
                         <li><a href="/" data-page="index">Начало</a></li>
-                        <li><a href="about.html" data-page="about">За нас</a></li>
-                        <li><a href="services.html" data-page="services">Услуги</a></li>
-                        <!-- <li><a href="portfolio.html" data-page="portfolio">Портфолио</a></li>
-                        <li><a href="blog.html" data-page="blog">Блог</a></li> -->
-                        <li><a href="contact.html" data-page="contact">Контакти</a></li>
-                        <li class="lang-switch"><a href="en/" id="lang-switch-link"><img src="assets/images/flags/gb.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
+                        <li><a href="/about/" data-page="about">За нас</a></li>
+                        <li><a href="/services/" data-page="services">Услуги</a></li>
+                        <!-- <li><a href="/portfolio/" data-page="portfolio">Портфолио</a></li>
+                        <li><a href="/blog/" data-page="blog">Блог</a></li> -->
+                        <li><a href="/contact/" data-page="contact">Контакти</a></li>
+                        <li class="lang-switch"><a href="/en/" id="lang-switch-link"><img src="/assets/images/flags/en.svg" alt="English" class="flag-icon"><span>EN</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -46,28 +46,28 @@
     // Function to set active page based on current URL
     function setActivePage() {
         const currentPath = window.location.pathname;
-        const currentPage = currentPath.split('/').pop() || 'index.html';
+        
+        // Normalize path - remove trailing slash for comparison
+        const normalizedPath = currentPath.replace(/\/$/, '') || '';
         
         // Get all nav links
         const navLinks = document.querySelectorAll('.nav-menu a[data-page]');
         
         navLinks.forEach(link => {
             const linkPage = link.getAttribute('data-page');
-            const linkHref = link.getAttribute('href');
+            const linkHref = link.getAttribute('href').replace(/\/$/, '');
             
             // Remove active class from all links
             link.classList.remove('active');
             
-            // Check if this is the current page - EXACT MATCH ONLY
+            // Check if this is the current page
             if (
                 // Homepage checks
-                (currentPage === 'index.html' && linkPage === 'index') ||
-                (currentPage === '' && linkPage === 'index') ||
-                (currentPath === '/' && linkPage === 'index') ||
-                // Exact page match
-                (linkHref === currentPage) ||
-                // Page name match (e.g., about.html matches about)
-                (currentPage === linkPage + '.html')
+                ((normalizedPath === '' || normalizedPath === '/index') && linkPage === 'index') ||
+                // Exact URL match
+                (normalizedPath === linkHref) ||
+                // Page name match
+                (normalizedPath === '/' + linkPage)
             ) {
                 link.classList.add('active');
             }
@@ -80,31 +80,29 @@
         if (!langLink) return;
         
         const currentPath = window.location.pathname;
-        const currentPage = currentPath.split('/').pop() || 'index.html';
         
-        // Page mapping for language switch
+        // Page mapping for language switch (BG → EN)
         const pageMap = {
-            'index.html': 'en/',
-            '': 'en/',
-            'about.html': 'en/about.html',
-            'services.html': 'en/services.html',
-            'portfolio.html': 'en/portfolio.html',
-            'blog.html': 'en/blog.html',
-            'contact.html': 'en/contact.html',
-            'privacy.html': 'en/privacy.html',
-            'terms.html': 'en/terms.html'
+            '/': '/en/',
+            '/index/': '/en/',
+            '/about/': '/en/about/',
+            '/services/': '/en/services/',
+            '/portfolio/': '/en/portfolio/',
+            '/blog/': '/en/blog/',
+            '/contact/': '/en/contact/',
+            '/privacy/': '/en/privacy/',
+            '/terms/': '/en/terms/'
         };
         
+        // Normalize current path
+        const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+        
         // Set the link based on current page
-        if (pageMap[currentPage]) {
-            langLink.setAttribute('href', pageMap[currentPage]);
+        if (pageMap[normalizedPath]) {
+            langLink.setAttribute('href', pageMap[normalizedPath]);
         } else {
-            // Fallback: try to construct the path
-            if (currentPage && currentPage !== '/') {
-                langLink.setAttribute('href', 'en/' + currentPage);
-            } else {
-                langLink.setAttribute('href', 'en/');
-            }
+            // Fallback: add /en/ prefix
+            langLink.setAttribute('href', '/en' + currentPath);
         }
     }
     
@@ -115,5 +113,3 @@
         initNav();
     }
 })();
-
-
