@@ -62,7 +62,7 @@
   "name": "LifeHack Software",
   "url": "https://lifehacksoftware.com",
   "logo": "https://lifehacksoftware.com/assets/images/logo_no_bg.png",
-  "description": "LifeHack Software предоставя софтуерна разработка, QA тестване, SEO оптимизация и дигитален маркетинг за бизнес клиенти.",
+  "description": "LifeHack Software предоставя софтуерна разработка, уеб дизайн и изработка на сайтове, QA тестване, SEO оптимизация и дигитален маркетинг за бизнес клиенти.",
   "sameAs": [
     "https://www.linkedin.com/company/lifehack-software"
   ],
@@ -100,6 +100,7 @@
 		initFooter();
 	}
 })();
+
 
 
 
