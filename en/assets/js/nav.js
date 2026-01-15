@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/en/" class="logo">
-                        <img src="../assets/images/bimi-svg-tiny-12-ps.svg" width="40px" height="auto" alt="LifeHack Software Logo">
+                        <img src="../assets/images/logo.svg" width="40px" height="auto" alt="LifeHack Software Logo">
                         <span>LifeHack Software</span>
                     </a>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -116,5 +116,6 @@
         initNav();
     }
 })();
+
 
 
