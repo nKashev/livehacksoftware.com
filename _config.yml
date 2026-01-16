@@ -5,6 +5,8 @@ permalink: /:basename/
 include:
   - ai-plugin.json
   - .well-known
+  - llms.txt
+  - robots.txt
 
 sass:
   style: compressed
