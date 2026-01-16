@@ -65,7 +65,6 @@ https://lifehacksoftware.com/
     ├── contact.html
     ├── privacy.html
     ├── terms.html
-    ├── 404.html
     └── assets
         └── js
             └── footer.js            # Footer
