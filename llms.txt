@@ -187,7 +187,6 @@ This llms.txt file will be updated when:
 
 User-agent: *
 Allow: /
-Disallow: /assets/
 Disallow: /404.html
 Disallow: /blog/
 Disallow: /portfolio/
