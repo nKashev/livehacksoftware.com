@@ -24,6 +24,10 @@ Allow: /assets/images/*.svg
 Allow: /assets/images/*.png
 Allow: /assets/images/*.jpg
 
+# Allow AI/LLM specific files
+Allow: /llms.txt
+Allow: /.well-known/ai-plugin.json
+
 # Sitemaps
 Sitemap: https://lifehacksoftware.com/sitemap.xml
 
@@ -56,5 +60,6 @@ Disallow: /
 
 User-agent: dotbot
 Disallow: /
+
 
 
