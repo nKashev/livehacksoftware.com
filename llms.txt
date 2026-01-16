@@ -1,7 +1,7 @@
 # LifeHack Software - AI Context & Instructions
 
-> Професионална изработка на уебсайтове, SEO оптимизация и дигитален маркетинг за бизнеси в България.
-> Professional website development, SEO optimization, and digital marketing for businesses in Bulgaria.
+> Професионална изработка на уебсайтове, уеб дизайн, SEO оптимизация и дигитален маркетинг за бизнеси в България.
+> Professional website development, web design, SEO optimization, and digital marketing for businesses in Bulgaria.
 
 ## Site Information
 
@@ -195,3 +195,4 @@ Disallow: /portfolio/
 Preferred-language: bg, en
 
 Canonical-site: https://lifehacksoftware.com/
+
