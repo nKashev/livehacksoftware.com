@@ -3,6 +3,9 @@
 > Професионална изработка на уебсайтове, уеб дизайн, SEO оптимизация и дигитален маркетинг за бизнеси в България.
 > Professional website development, web design, SEO optimization, and digital marketing for businesses in Bulgaria.
 
+## API & Integration
+- AI Plugin: /.well-known/ai-plugin.json
+
 ## Site Information
 
 - Site: LifeHack Software
@@ -194,4 +197,5 @@ Disallow: /portfolio/
 Preferred-language: bg, en
 
 Canonical-site: https://lifehacksoftware.com/
+
 
