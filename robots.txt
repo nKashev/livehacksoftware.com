@@ -4,6 +4,10 @@
 User-agent: *
 Allow: /
 
+# Block assets and technical files
+Disallow: /404.html
+Disallow: /404
+
 # Block pages under development
 Disallow: /blog/
 Disallow: /blog.html
@@ -56,6 +60,7 @@ Disallow: /
 
 User-agent: dotbot
 Disallow: /
+
 
 
 
