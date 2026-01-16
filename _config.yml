@@ -7,7 +7,6 @@ include:
   - .well-known
   - llms.txt
   - robots.txt
-  - 404.html
 
 exclude:
   - wordpress
