@@ -1,5 +1,10 @@
-# За clean URLs, sitemap и minification
+# За чист URLs, sitemap и minification
 permalink: /:basename/
+
+# Включване на специални файлове
+include:
+  - ai-plugin.json
+  - .well-known
 
 sass:
   style: compressed
