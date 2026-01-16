@@ -30,7 +30,7 @@ Allow: /assets/images/*.jpg
 # Sitemaps
 Sitemap: https://lifehacksoftware.com/sitemap.xml
 
-# Crawl rate (optional - за да не претоварваш сървъра)
+# Crawl rate (optional)
 Crawl-delay: 1
 
 # Specific bot instructions
@@ -59,3 +59,4 @@ Disallow: /
 
 User-agent: dotbot
 Disallow: /
+
