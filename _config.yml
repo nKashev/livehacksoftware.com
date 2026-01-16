@@ -8,5 +8,11 @@ include:
   - llms.txt
   - robots.txt
 
+exclude:
+  - wordpress
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
 sass:
   style: compressed
