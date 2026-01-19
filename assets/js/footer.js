@@ -24,7 +24,7 @@
                     <div class="footer-col">
                         <h4>Контакти</h4>
                         <ul>
-                            <li><a href="tel:+359876544896">+359 87 654 4896</a></li>
+                            <li><a href="tel:+359899807751">+359 89 980 7751</a></li>
                             <li><a href="mailto:office@lifehacksoftware.com">office@lifehacksoftware.com</a></li>
                         </ul>
                     </div>
@@ -100,6 +100,7 @@
 		initFooter();
 	}
 })();
+
 
 
 
