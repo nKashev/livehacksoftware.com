@@ -24,7 +24,7 @@
                     <div class="footer-col">
                         <h4>Contacts</h4>
                         <ul>
-                            <li><a href="tel:+359876544896">+359 87 654 4896</a></li>
+                            <li><a href="tel:+359899807751">+359 89 980 7751</a></li>
                             <li><a href="mailto:office@lifehacksoftware.com">office@lifehacksoftware.com</a></li>
                         </ul>
                     </div>
@@ -69,7 +69,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer support",
-    "telephone": "+359876544896",
+    "telephone": "+359899807751",
     "email": "office@lifehacksoftware.com",
     "areaServed": "BG",
     "availableLanguage": ["bg", "en"]
@@ -100,6 +100,7 @@
     }
 
 })();
+
 
 
 
