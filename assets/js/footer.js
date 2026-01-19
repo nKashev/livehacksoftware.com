@@ -69,7 +69,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer support",
-    "telephone": "+359876544896",
+    "telephone": "+359899807751",
     "email": "office@lifehacksoftware.com",
     "areaServed": "BG",
     "availableLanguage": ["bg", "en"]
@@ -100,6 +100,7 @@
 		initFooter();
 	}
 })();
+
 
 
 
