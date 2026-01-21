@@ -277,6 +277,16 @@ body {
 
 @media (max-width: 768px) {
     .logo img {
+        display: block;
+    }
+
+    .logo span {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
         display: none;
     }
 
