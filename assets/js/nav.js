@@ -72,8 +72,8 @@
         document.body.insertAdjacentHTML('afterbegin', navHTML);
         setActivePage();
         setLanguageLink();
-        initLanguageSwitchScrollPreservation();
-        restoreScrollPosition();
+        initLanguageSwitchScrollPreservation(); // НОВО: Добавяме функцията
+        restoreScrollPosition(); // НОВО: Възстановяваме позицията
     }
     
     function setActivePage() {
@@ -118,54 +118,37 @@
         langLink.setAttribute('href', switchTo);
     }
     
-    // Запазване на scroll позицията при смяна на език с fade ефект
+    // НОВО: Запазване на scroll позицията при смяна на език
     function initLanguageSwitchScrollPreservation() {
         const langLink = document.getElementById('lang-switch-link');
         
         if (langLink) {
             langLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Запази текущата scroll позиция
+                // Запази текущата scroll позиция в sessionStorage
                 sessionStorage.setItem('lhs_scroll_position', window.scrollY.toString());
-                
-                const targetUrl = this.getAttribute('href');
-                
-                // Добави fade out ефект
-                document.body.style.transition = 'opacity 0.2s ease';
-                document.body.style.opacity = '0';
-                
-                // След fade out, премини към новата страница
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                }, 200);
             });
         }
     }
     
-    // Възстановяване на scroll позицията след зареждане с fade in ефект
+    // НОВО: Възстановяване на scroll позицията след зареждане
     function restoreScrollPosition() {
-        const savedPosition = sessionStorage.getItem('lhs_scroll_position');
-        
-        if (savedPosition !== null) {
-            // Започни с opacity 0
-            document.body.style.opacity = '0';
+        // Изчакай страницата да се зареди напълно
+        window.addEventListener('load', function() {
+            const savedPosition = sessionStorage.getItem('lhs_scroll_position');
             
-            // Скролни ВЕДНАГА на правилната позиция (преди всичко друго)
-            window.scrollTo(0, parseInt(savedPosition));
-            
-            // Изчакай страницата да се зареди напълно
-            window.addEventListener('load', function() {
-                // По-дълго закъснение за да се рендерира всичко
+            if (savedPosition !== null) {
+                // Малко закъснение за да се рендерира съдържанието
                 setTimeout(function() {
-                    document.body.style.transition = 'opacity 0.5s ease';
-                    document.body.style.opacity = '1';
+                    window.scrollTo({
+                        top: parseInt(savedPosition),
+                        behavior: 'smooth'
+                    });
                     
                     // Изчисти запазената позиция
                     sessionStorage.removeItem('lhs_scroll_position');
-                }, 150);
-            });
-        }
+                }, 50);
+            }
+        });
     }
     
     if (document.readyState === 'loading') {
