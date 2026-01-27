@@ -151,18 +151,19 @@
             // Започни с opacity 0
             document.body.style.opacity = '0';
             
-            // Скролни веднага на правилната позиция (преди да се покаже)
+            // Скролни ВЕДНАГА на правилната позиция (преди всичко друго)
             window.scrollTo(0, parseInt(savedPosition));
             
-            // След зареждане на страницата, покажи с fade in
+            // Изчакай страницата да се зареди напълно
             window.addEventListener('load', function() {
+                // По-дълго закъснение за да се рендерира всичко
                 setTimeout(function() {
-                    document.body.style.transition = 'opacity 0.3s ease';
+                    document.body.style.transition = 'opacity 0.5s ease';
                     document.body.style.opacity = '1';
                     
                     // Изчисти запазената позиция
                     sessionStorage.removeItem('lhs_scroll_position');
-                }, 50);
+                }, 150);
             });
         }
     }
