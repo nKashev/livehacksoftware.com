@@ -118,12 +118,37 @@
         });
     }
 
+    // IndexNow - Auto-submit pages to search engines
+    function initIndexNow() {
+        const INDEXNOW_KEY = 'edb26dc8855f49cc96baaedc32772bf8';
+        const HOST = 'lifehacksoftware.com';
+        
+        // Изпращай само на production домейна
+        if (window.location.hostname !== HOST) return;
+        
+        const currentUrl = window.location.href;
+        
+        // Използвай GET метод чрез Image beacon (заобикаля CSP)
+        setTimeout(function() {
+            const img = new Image();
+            const params = new URLSearchParams({
+                url: currentUrl,
+                key: INDEXNOW_KEY
+            });
+            img.src = `https://api.indexnow.org/indexnow?${params.toString()}`;
+            
+            // Логване само за development/debugging
+            // console.log('IndexNow: Submitted', currentUrl);
+        }, 2000); // Изчакай 2 секунди след зареждане
+    }
+
     // Initialize all functions when DOM is ready
     function init() {
         initMobileMenu();
         initSmoothScroll();
         initScrollAnimations();
         initBackToTop();
+        initIndexNow();
     }
     
     // Run initialization
