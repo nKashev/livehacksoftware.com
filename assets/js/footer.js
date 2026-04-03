@@ -47,22 +47,23 @@
                     <p>&nbsp;</p>
                 </div>
             </div>
-        </footer>
-		<div id="cookie-banner" class="cookie-banner">
-  			<div class="cookie-content">
+			
+			<div id="cookie-banner" class="cookie-banner">
+  				<div class="cookie-content">
     
-    			<div class="cookie-text">
-      			Използваме бисквитки за анализ и подобряване на услугата.
-      			<a href="/privacy-policy" style="color: var(--primary);">Научи повече</a>
-    			</div>
+    					<div class="cookie-text">
+      						Използваме бисквитки за анализ и подобряване на услугата.
+      						<a href="/privacy-policy" style="color: var(--primary);">Научи повече</a>
+    					</div>
 
-    			<div class="cookie-actions">
-      			<button class="cookie-btn accept" onclick="acceptCookies()">Приемам</button>
-      			<button class="cookie-btn reject" onclick="rejectCookies()">Отказвам</button>
-    		</div>
+    				<div class="cookie-actions">
+      					<button class="cookie-btn accept" onclick="acceptCookies()">Приемам</button>
+      					<button class="cookie-btn reject" onclick="rejectCookies()">Отказвам</button>
+    				</div>
 
-  		</div>
-	</div>
+  				</div>
+			</div>
+        </footer>
     `;
 
 
