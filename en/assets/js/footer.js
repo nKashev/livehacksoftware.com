@@ -47,8 +47,8 @@
                     <p>&nbsp;</p>
                 </div>
             </div>
-			
-			<div id="cookie-banner" class="cookie-banner">
+        </footer>
+		<div id="cookie-banner" class="cookie-banner">
   				<div class="cookie-content">
     
     			<div class="cookie-text">
@@ -63,7 +63,6 @@
 
   			</div>
 		</div>
-        </footer>
     `;
     
     // Create schema.org structured data
