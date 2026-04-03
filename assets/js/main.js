@@ -142,8 +142,8 @@
         }, 2000); // Изчакай 2 секунди след зареждане
     }
 
-    // Cookie Consentfunction 
-    initCookieConsent() {
+    // Cookie Consent
+    function initCookieConsent() {
     const banner = document.getElementById('cookie-banner');
     if (!banner) return;
 
