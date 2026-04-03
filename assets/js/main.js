@@ -142,10 +142,15 @@
         }, 2000); // Изчакай 2 секунди след зареждане
     }
 
-    // Cookie Consent
-function initCookieConsent() {
+    // Cookie Consentfunction initCookieConsent() {
     const banner = document.getElementById('cookie-banner');
     if (!banner) return;
+
+    // Проверка дали вече има consent
+    const consent = localStorage.getItem('cookie_consent');
+    if (!consent) {
+        banner.style.display = 'block'; // показва банера
+    }
 
     function applyConsent(consent) {
         if (consent === 'granted') {
@@ -168,14 +173,6 @@ function initCookieConsent() {
         localStorage.setItem('cookie_consent', 'denied');
         banner.style.display = 'none';
     };
-
-    const consent = localStorage.getItem('cookie_consent');
-
-    if (consent === 'granted') {
-        applyConsent('granted');
-    } else if (!consent) {
-        banner.style.display = 'block';
-    }
 }
     
     // Initialize all functions when DOM is ready
