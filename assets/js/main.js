@@ -142,6 +142,42 @@
         }, 2000); // Изчакай 2 секунди след зареждане
     }
 
+    // Cookie Consent
+function initCookieConsent() {
+    const banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+
+    function applyConsent(consent) {
+        if (consent === 'granted') {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    window.acceptCookies = function () {
+        localStorage.setItem('cookie_consent', 'granted');
+        applyConsent('granted');
+        banner.style.display = 'none';
+    };
+
+    window.rejectCookies = function () {
+        localStorage.setItem('cookie_consent', 'denied');
+        banner.style.display = 'none';
+    };
+
+    const consent = localStorage.getItem('cookie_consent');
+
+    if (consent === 'granted') {
+        applyConsent('granted');
+    } else if (!consent) {
+        banner.style.display = 'block';
+    }
+}
+    
     // Initialize all functions when DOM is ready
     function init() {
         initMobileMenu();
@@ -149,6 +185,7 @@
         initScrollAnimations();
         initBackToTop();
         initIndexNow();
+        initCookieConsent();
     }
     
     // Run initialization
