@@ -47,22 +47,23 @@
                     <p>&nbsp;</p>
                 </div>
             </div>
-        </footer>
-		<div id="cookie-banner" class="cookie-banner">
-  			<div class="cookie-content">
+			
+			<div id="cookie-banner" class="cookie-banner">
+  				<div class="cookie-content">
     
     			<div class="cookie-text">
-      			We use cookies to analyze and improve our service.
-      			<a href="/privacy-policy" style="color: var(--primary);">Learn more</a>
+      				We use cookies to analyze and improve our service.
+      				<a href="/privacy-policy" style="color: var(--primary);">Learn more</a>
     			</div>
 
     			<div class="cookie-actions">
-      			<button class="cookie-btn accept" onclick="acceptCookies()">I accept</button>
-      			<button class="cookie-btn reject" onclick="rejectCookies()">I decline</button>
-    		</div>
+      				<button class="cookie-btn accept" onclick="acceptCookies()">I accept</button>
+      				<button class="cookie-btn reject" onclick="rejectCookies()">I decline</button>
+    			</div>
 
-  		</div>
-	</div>
+  			</div>
+		</div>
+        </footer>
     `;
     
     // Create schema.org structured data
