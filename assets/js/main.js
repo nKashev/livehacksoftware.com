@@ -145,16 +145,18 @@
     // Cookie Consent
     function initCookieConsent() {
     const banner = document.getElementById('cookie-banner');
-    if (!banner) return;
-
-    // Проверка дали вече има consent
-    const consent = localStorage.getItem('cookie_consent');
-    if (!consent) {
-        banner.style.display = 'block'; // показва банера
+    if (!banner) {
+        console.warn('Cookie banner element not found!');
+        return;
     }
 
-    function applyConsent(consent) {
-        if (consent === 'granted') {
+    const consent = localStorage.getItem('cookie_consent');
+    if (!consent) {
+        banner.style.display = 'block';
+    }
+
+    function applyConsent(type) {
+        if (type === 'granted') {
             gtag('consent', 'update', {
                 'ad_storage': 'granted',
                 'ad_user_data': 'granted',
