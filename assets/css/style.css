@@ -311,11 +311,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/tech-hero.webp');
+    background-image: url('../images/lifehack_hands.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.15;
+    opacity: 0.30;
     z-index: 0;
 }
 
@@ -563,11 +563,11 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/tech-hero.webp');
+    background-image: url('../images/lifehack_hands.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.15;
+    opacity: 0.30;
     z-index: 0;
 }
 
@@ -581,7 +581,7 @@ section {
 
 .page-header p {
     font-size: 1.125rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     position: relative;
     font-weight: 700;
     z-index: 1;
