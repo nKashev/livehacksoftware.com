@@ -176,7 +176,7 @@
         <div class="fixed-buttons chat-buttons-container" id="chat-buttons">
             <!-- Chat Button 1 -->
             <div class="chat-button" id="chat-button-1" style="background-color: white; border: 1px solid #000;">
-                <a href="tel:+359888175508" target="_blank">
+                <a href="tel:+359899807751" target="_blank">
 					<i class="fa-solid fa-phone fa-xl" style="color: #000000;"></i>
             	</a>
                 <div class="chat-label">Телефон</div>
